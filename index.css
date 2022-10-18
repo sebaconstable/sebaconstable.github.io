@@ -1,42 +1,40 @@
-/* Richard Davies, Data Science for Economists */
-
-/* This is my first proper css file */
-
-
 /* Import a font */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
 
 /* Set the background color for my page: */
+
+/* Book on colour = Joseph Albers - Interaction of Colour */
+
 body{
-    background-color: rgb(233, 233, 233);
- 
-}
+    background-color: rgb(146, 9, 9);
+ }
 
 
 /* Choose the appearance of the tags, h1, h3 and p: */
 h1, h3, p{
-    color:rgb(17, 17, 17);
+    color:rgb(0, 0, 0);
     font-family: 'Roboto', sans-serif;
     text-align: center;
 }
+
+a{
+    background-color: rgb(146, 9, 9, .3);
+    padding: 10px;
     
-.myWeek1{
-    margin: auto;
-    max-width: 600px;
-    background-color: bisque;
-}
-
-
-/* Set the apperance of the class, chart */
-.chart{
-    background-color: orange;
-    width:330px;
-    border-width: 10px;
+    border: 3px;
+    border-color: black;
     border-style: solid;
-    border-radius: 5px;
-    border-color: red;
+    border-radius: 25px;
 
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 200;
+    color: black;
+}
+
+a:hover{
+    background-color: rgba(146, 9, 9, .5);
+    border: 2px;
+    border-style: solid;
     
 }
-    
