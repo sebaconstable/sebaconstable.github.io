@@ -1,29 +1,75 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title for the page -->
     <title>Document</title>
 
+    <!-- Link to my style sheet -->
     <link rel="stylesheet" href="index2.css">
 
+    <!--The next three lines allow the Vega embed-->
     <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
 </head>
+
+
+
 <body>
-    <div>
-        <h1>Week 2</h1>
-        <h2>IMF lending outstanding</h2>
-        <div class="chart" id="Chart3"></div>
-    
+    <!-- A div that contains a group of items for week 1. Can be useful for setting background colours etc.  -->
+    <div style="text-align:center">
+    <div class="Portfolio">
+        <h1>My Portfolio</h1>
+        <a href="index.html"> Home</a>
+        <a href="project.html"> My Project</a>
+        <a href="CV.html"> CV</a>
     </div>
     
-</body>
-<script>
-    var myChart3 = "IMFLending.json";
+    
+    
+    <div class="myWeek1">
+        <h3>Week One</h3>
+        <p>Our first task was to embed charts</p>
+        
+        <p>The first chart illustrates meat consumption in OECD countries.</p>
+        <div class="chart" id="Chart1"></div>
 
-    vegaEmbed('#Chart3', myChart3);
+        
+        <p>My second chart looks at ethereum trading statistics from 2016-2021</p>
+        <div class="chart" id="Chart2"> </div>
+    </div> 
+
+    <div class="myWeek2">
+        <h3>Week Two</h3>
+        <p>Our second task was to embed the original and a corrected version of total IMF loans outstanding</p>
+        
+        <p>First the original, in nominal terms:</p>
+        <div class="chart" id="Chart3"> </div>
+
+        <p>This version shows the total loans outstanding as a fraction of global GDP </p>
+        <div class="chart" id="Chart4"</div>
+    </div>
+</body>
+
+
+<script>
+    //Define charts:
+    var myChart1 = "chart1_Env.json";
+    var myChart2 = "chart2_eth.json";
+    var myChart3 = "chart3_IMFLending.json"
+
+    // Embed charts:
+    vegaEmbed('#Chart1', myChart1);
+    vegaEmbed('#Chart2', myChart2);
+    vegaEmbed('#Chart3', myChart3)
 </script>
+
 </html>
+
