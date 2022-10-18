@@ -7,7 +7,15 @@
 /* Book on colour = Joseph Albers - Interaction of Colour */
 
 body{
-    background-color: rgb(146, 9, 9);
+    background-color: rgb(255, 255, 255);
+    background-image: url(/Background.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
  }
 
 
@@ -17,7 +25,24 @@ h1, h3, p{
     font-family: 'Roboto', sans-serif;
     text-align: center;
 }
+.navbar{
+    background-color: rgb(0, 0, 0);
+    overflow: auto;
+}
+.navbar a {
+    float: right;
+    color: rgb(146, 9, 9, .3);
+    padding: 14px 16 px;
+    text-decoration: none;
+    font-size: 17px;
+}
 
+.Home{
+    position: relative;
+    top: 3%;
+    left: 0%;
+    min-width: 100%;
+}
 a{
     background-color: rgb(146, 9, 9, .3);
     padding: 10px;
