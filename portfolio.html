@@ -34,7 +34,7 @@
     
     
     
-    <div class="myWeek" id="#1">
+    <div class="myWeek" id="w1">
         <h3>Week One</h3>
         <p>Our first task was to embed charts</p>
         
@@ -46,7 +46,7 @@
         <div class="chart" id="Chart2"> </div>
     </div> 
 
-    <div class="myWeek" id="#2">
+    <div class="myWeek" id="w2">
         <h3>Week Two</h3>
         <p>Our second task was to embed the original and a corrected version of total IMF loans outstanding</p>
         
@@ -56,14 +56,25 @@
         <p>This version shows the total loans outstanding as a fraction of global GDP: </p>
         <div class="chart" id="Chart4"></div>
 
-        <p>In Conclusion, we can see the importance of using relative measures. This way, we see that 1984 is actually the riskiest year, with the highest outstanding loans as % of GDP</p>
+        <p>In Conclusion, we see that 1984 is actually the riskiest year, with the highest outstanding loans as % of GDP.</p>
     </div>
 
-    <div class="myWeek" id="#3">
+    <div class="myWeek" id="w3">
         <h3>Week Three</h3>
+        <p>Our third task was to create two charts with embedded data</p>
 
+        <p>First, a simple bar chart showing Sorare's historical sales data</p>
+        <div class="chart" id="Chart5"></div>
 
+        <p>By making it a line chart, and starting from a later date, the chart allows for a more detailed exploration of recent trends and volatility</p>
+        <div class="chart" id="Chart6"></div>
+    </div>
 
+    <div class="myWeek" id="w4">
+        <h3>Week Four</h3>
+        <p>Our fourth task was to scrape, clean and normalise data from a website</p>
+
+        <p>I chose to take data about X and it is presented below</p>
     </div>
 </body>
 
@@ -74,12 +85,18 @@
     var myChart2 = "chart2_eth.json";
     var myChart3 = "chart3_IMFLending.json"
     var myChart4 = "chart4_IMFLendingadj.json"
+    var myChart5 = "chart5_SorareSales.json"
+    var myChart6 = "chart6_SorareSalesimprv.json"
+
 
     // Embed charts:
     vegaEmbed('#Chart1', myChart1);
     vegaEmbed('#Chart2', myChart2);
     vegaEmbed('#Chart3', myChart3);
     vegaEmbed('#Chart4', myChart4);
+    vegaEmbed('#Chart5', myChart5);
+    vegaEmbed('#Chart6', myChart6);
+
 </script>
 
 </html>
