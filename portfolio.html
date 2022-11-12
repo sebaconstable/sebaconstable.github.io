@@ -74,20 +74,23 @@
         <h3>Week Four</h3>
         <p>Our fourth task was to scrape, clean and normalise data from a website</p>
 
-        <p>I chose to take data about X and it is presented below</p>
+        <p>I took World Cup winner odds from justbookies and calculated the true implied winning probabilities for each country. I chose the site as it aggregates data from several bookmakers, so by taking an average I could get a more robust result.</p>
+    
+        <div class="chart" id="Chart7></div>
+    
     </div>
 </body>
 
 
 <script>
     //Define charts:
-    var myChart1 = "chart1_Env.json";
-    var myChart2 = "chart2_eth.json";
+    var myChart1 = "chart1_Env.json"
+    var myChart2 = "chart2_eth.json"
     var myChart3 = "chart3_IMFLending.json"
     var myChart4 = "chart4_IMFLendingadj.json"
     var myChart5 = "chart5_SorareSales.json"
     var myChart6 = "chart6_SorareSalesimprv.json"
-
+    var myChart7 = "chart7_WCOdds.json"
 
     // Embed charts:
     vegaEmbed('#Chart1', myChart1);
@@ -96,7 +99,7 @@
     vegaEmbed('#Chart4', myChart4);
     vegaEmbed('#Chart5', myChart5);
     vegaEmbed('#Chart6', myChart6);
-
+    vegaEmbed('#Chart7', myChart7);
 </script>
 
 </html>
