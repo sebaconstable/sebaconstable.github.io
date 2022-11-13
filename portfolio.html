@@ -76,8 +76,26 @@
 
         <p>I took World Cup winner odds from justbookies and calculated the true implied winning probabilities for each country. I chose the site as it aggregates data from several bookmakers, so by taking an average I could get a more robust result.</p>
     
-        <div class="chart" id="Chart7></div>
+        <div class="chart" id="Chart7"></div>
     
+    </div>
+
+    <div class ="myWeek" id="w5">
+        <h3>Week Five</h3>
+        <p>Our fifth task was to loop on the ONS API to quickly produce 9 time series from a dataset</p>
+        
+        <div class="chart"></div>
+    </div>
+
+    <div class="myWeek" id="w7">
+        <h3>Week Seven</h3>
+        <p>Our seventh task was to produce a base map and a choropleth map</p>
+
+        <p>First, my base map of South America:</p>
+
+        <div class="chart" id="Chart8"></div>
+
+
     </div>
 </body>
 
@@ -91,6 +109,7 @@
     var myChart5 = "chart5_SorareSales.json"
     var myChart6 = "chart6_SorareSalesimprv.json"
     var myChart7 = "chart7_WCOdds.json"
+    var myChart8 = "chart8_basemap.json"
 
     // Embed charts:
     vegaEmbed('#Chart1', myChart1);
@@ -100,6 +119,7 @@
     vegaEmbed('#Chart5', myChart5);
     vegaEmbed('#Chart6', myChart6);
     vegaEmbed('#Chart7', myChart7);
+    vegaEmbed('#Chart8', myChart8);
 </script>
 
 </html>
