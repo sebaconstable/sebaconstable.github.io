@@ -1,0 +1,57 @@
+{"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "description": "",
+
+  "title": {
+    "text": "Inequality in South America",
+    "subtitle":["Gini Index by Country, source: World Bank"],
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "middle",
+    "color": "black"},
+
+  "config": {
+      "background":"white",
+      "view": {"stroke": "transparent"}},
+  
+  "width": 300,
+  "height": 350,
+  
+  "data": {
+    "url": "https://raw.githubusercontent.com/sebaconstable/sebaconstable.github.io/main/custom.geo.json",
+        "format": {"property": "features"}},
+
+
+  "transform": [{
+    "lookup": "properties.subunit",
+    "from": {
+      "key": "Country",
+      "fields": ["Gini Index"],
+      "data":{"url": "https://raw.githubusercontent.com/sebaconstable/sebaconstable.github.io/main/South%20America%20Ginis.csv"}
+    }
+  }],
+  "projection": {"type": "mercator"},
+  
+  "mark": {
+      "type": "geoshape",
+      "stroke": "white",
+      "strokeWidth":0.5},
+
+  "encoding": {
+    "color":{
+      "field":"Gini Index",
+        "legend":{
+          "title": null,
+          "orient": "right",
+          "direction": "vertical"},
+          "type": "quantitative",
+          "scale":{
+            "scheme":"inferno",
+            "reverse": false}},
+    "tooltip": [
+      {"field": "properties.subunit", "title":"Country"},
+      {"field": "Gini Index", "title":"Gini", "format":",d"}
+    ]
+      
+  }
+}
