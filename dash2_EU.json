@@ -1,0 +1,17 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "CG: Current expenditure: UK contributions to EU (D.76u) VAT & GNI: £m CPNSA",
+    "data": {
+      "url": "https://raw.githubusercontent.com/sebaconstable/sebaconstable.github.io/main/ons_json_M9LH.json",
+      "format": {"property": "years"}
+    },
+    "mark": {"type":"line", "color": "rgb(0,47,167"},
+    "encoding": {
+      "x": {
+        "field": "date",
+        "type": "temporal",
+        "title": "UK Conributions to EU"
+      },
+      "y": {"field": "value", "type": "quantitative", "title": "£ (Millions)"}
+    }
+  }

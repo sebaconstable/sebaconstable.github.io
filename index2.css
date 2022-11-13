@@ -25,7 +25,7 @@ h1, h3, p{
 
 .Portfolio{
     margin: auto;
-    max-width: 750px;
+    max-width: 1000px;
     background-color: rgb(220, 220, 220);
     margin-bottom: 10px;
     height: 120px;
@@ -36,7 +36,7 @@ h1, h3, p{
 }
 .myWeek{
     margin: auto;
-    max-width: 750px;
+    max-width:1000px;
     background-color: rgb(220, 220, 220);
     height: 1020px;
     margin-bottom: 15px;     
@@ -67,7 +67,19 @@ a:hover{
     
 }
 
+b{background-color: rgba(52, 51, 2, 0.3);
+    padding: 20px;
+    
+    border: 3px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 25px;
 
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 300;
+    color: black;
+
+}
 /* Set the apperance of the class, chart */
 .chart{
     background-color: white;
@@ -82,4 +94,11 @@ a:hover{
     
 }
     
-
+.miniChart{
+    background-color: white;
+    width:300px;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: rgb(146, 9, 9);
+}

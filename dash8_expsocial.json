@@ -1,0 +1,17 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "CG: Current expenditure:Net social benefits: Social assistance (D623): £m CPNSA",
+    "data": {
+      "url": "https://raw.githubusercontent.com/sebaconstable/sebaconstable.github.io/main/ons_json_NZGO.json",
+      "format": {"property": "years"}
+    },
+    "mark": {"type":"line", "color": "rgb(0,47,167"},
+    "encoding": {
+      "x": {
+        "field": "date",
+        "type": "temporal",
+        "title": "Expenditure on Social Assistance"
+      },
+      "y": {"field": "value", "type": "quantitative", "title": "£ (Millions)"}
+    }
+  }

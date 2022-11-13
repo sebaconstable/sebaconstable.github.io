@@ -1,0 +1,17 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Central government (S.1311): Net Lending (+) / Net borrowing (-) (B.9N): CP £m: NSA",
+    "data": {
+      "url": "https://raw.githubusercontent.com/sebaconstable/sebaconstable.github.io/main/ons_json_NMFJ.json",
+      "format": {"property": "years"}
+    },
+    "mark": {"type":"line", "color": "rgb(0,47,167"},
+    "encoding": {
+      "x": {
+        "field": "date",
+        "type": "temporal",
+        "title": "BoE Net Lending"
+      },
+      "y": {"field": "value", "type": "quantitative", "title": "£ (Millions)"}
+    }
+  }

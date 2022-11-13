@@ -1,0 +1,17 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "GG: Gross Operating Surplus: £m CPNSA",
+    "data": {
+      "url": "https://raw.githubusercontent.com/sebaconstable/sebaconstable.github.io/main/ons_json_NMXV.json",
+      "format": {"property": "years"}
+    },
+    "mark": {"type":"line", "color": "rgb(0,47,167"},
+    "encoding": {
+      "x": {
+        "field": "date",
+        "type": "temporal",
+        "title": "Gross Operating Surplus"
+      },
+      "y": {"field": "value", "type": "quantitative", "title": "£ (Millions)"}
+    }
+  }

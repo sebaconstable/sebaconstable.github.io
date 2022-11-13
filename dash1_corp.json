@@ -1,0 +1,17 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Public Cooperations Net Spending",
+  "data": {
+    "url": "https://raw.githubusercontent.com/sebaconstable/sebaconstable.github.io/main/ons_json_CPCM.json",
+    "format": {"property": "years"}
+  },
+  "mark": {"type":"line", "color": "rgb(0,47,167"},
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "title": "Public Cooperations Net Spending"
+    },
+    "y": {"field": "value", "type": "quantitative", "title": "£ (Millions)"}
+  }
+}

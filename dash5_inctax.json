@@ -1,0 +1,17 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "CG: Current receipts: Taxes on income and wealth, receivable: £m",
+  "data": {
+    "url": "https://raw.githubusercontent.com/sebaconstable/sebaconstable.github.io/main/ons_json_NMCU.json",
+    "format": {"property": "years"}
+  },
+  "mark": {"type":"line", "color": "rgb(0,47,167"},
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "title": "UK Income from Income and Wealth Taxes"
+    },
+    "y": {"field": "value", "type": "quantitative", "title": "£ (Millions)"}
+  }
+}

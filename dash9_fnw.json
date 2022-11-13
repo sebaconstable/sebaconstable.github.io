@@ -1,0 +1,17 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "UK sector (S.1): Financial net worth (BF.90): Level: Current price: £million: Not seasonally adjusted",
+    "data": {
+      "url": "https://raw.githubusercontent.com/sebaconstable/sebaconstable.github.io/main/ons_json_NQFT.json",
+      "format": {"property": "years"}
+    },
+    "mark": {"type":"line", "color": "rgb(0,47,167"},
+    "encoding": {
+      "x": {
+        "field": "date",
+        "type": "temporal",
+        "title": "UK Financial Net Worth"
+      },
+      "y": {"field": "value", "type": "quantitative", "title": "£ (Millions)"}
+    }
+  }
