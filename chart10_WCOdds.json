@@ -7,7 +7,7 @@
    
     "encoding": {
       "x": {"field": "Country", "type": "nominal", "axis": {"labelAngle": -70}, "sort":"-y"},
-      "y": {"field": "True Average Probability", "type": "quantitative", "title":"Win Probability"},
+      "y": {"field": "True Average Probability", "type": "quantitative", "title":"Win Probability (%)"},
       "tooltip":[
         {"field":"Country", "type": "nominal", "title":"Country"},
         {"field":"True Average Probability", "type":"quantitative", "title":"Win Probability"},
