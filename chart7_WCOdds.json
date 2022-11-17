@@ -1,0 +1,16 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "A simple bar chart with embedded data.",
+    "data": {"url": "https://raw.githubusercontent.com/sebaconstable/sebaconstable.github.io/main/WCOdds.csv"},
+    "mark": {"type": "bar", "color": "rgb(0,67,0)"},
+   "config": {"numberFormat": ".2f"},
+   
+    "encoding": {
+      "x": {"field": "Country", "type": "nominal", "axis": {"labelAngle": -70}, "sort":"-y"},
+      "y": {"field": "True Average Probability", "type": "quantitative", "title":"Win Probability (%)"},
+      "tooltip":[
+        {"field":"Country", "type": "nominal", "title":"Country"},
+        {"field":"True Average Probability", "type":"quantitative", "title":"Win Probability"}
+      ]
+    }
+  }

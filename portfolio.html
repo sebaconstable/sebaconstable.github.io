@@ -77,14 +77,22 @@
         <p>I took World Cup winner odds from justbookies and calculated the true implied winning probabilities for each country. I chose the site as it aggregates data from several bookmakers, so by taking an average I could get a more robust result.</p>
     
         <div class="chart" id="Chart7"></div>
-    
+        <a href="https://colab.research.google.com/drive/1f8P137ws1Sr_QBRtuGE1hM9emrufcflX?usp=sharing"></a>
     </div>
 
     <div class ="myWeek" id="w5">
         <h3>Week Five</h3>
         <p>Our fifth task was to loop on the ONS API to quickly produce 9 time series from a dataset</p>
-        
-        <div class="chart"></div>
+        <div>
+        <li><div class="miniChart" id="mc4"></div><div class="miniChart" id="mc2"></div><div class="miniChart" id="mc3"></div></li>
+        </div>
+        <div>
+        <li><div class="miniChart" id="mc5"></div><div class="miniChart" id="mc6"></div><div class="miniChart" id="mc7"></div></li>
+        </div>
+        <div>
+        <li><div class="miniChart" id="mc1"></div><div class="miniChart" id="mc8"></div><div class="miniChart" id="mc9"></div></li>
+        </div>
+        <a href="https://colab.research.google.com/drive/1LbN45IX8flwpGEFPSJTG3mQjVRZOihbp?usp=sharing"> Colab</a>
     </div>
 
     <div class="myWeek" id="w7">
@@ -113,6 +121,16 @@
     var myChart7 = "chart7_WCOdds.json"
     var myChart8 = "chart8_basemap.json"
     var myChart9 = "chart9_SAGiniMap.json"
+    var myMinic1 = "dash1_corp.json"
+    var myMinic2 = "dash2_EU.json"
+    var myMinic3 = "dash3_G&S.json"
+    var myMinic4 = "dash4_subsidies.json"
+    var myMinic5 = "dash5_inctax.json"
+    var myMinic6 = "dash6_BoElend.json"
+    var myMinic7 = "dash7_gos.json"
+    var myMinic8 = "dash8_expsocial.json"
+    var myMinic9 = "dash9_fnw.json"
+
 
     // Embed charts:
     vegaEmbed('#Chart1', myChart1);
@@ -124,6 +142,15 @@
     vegaEmbed('#Chart7', myChart7);
     vegaEmbed('#Chart8', myChart8);
     vegaEmbed('#Chart9', myChart9);
+    vegaEmbed('#mc1', myMinic1);
+    vegaEmbed('#mc2', myMinic2);
+    vegaEmbed('#mc3', myMinic3);
+    vegaEmbed('#mc4', myMinic4);
+    vegaEmbed('#mc5', myMinic5);
+    vegaEmbed('#mc6', myMinic6);
+    vegaEmbed('#mc7', myMinic7);
+    vegaEmbed('#mc8', myMinic8);
+    vegaEmbed('#mc9', myMinic9);
 </script>
 
 </html>
