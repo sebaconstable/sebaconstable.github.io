@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": {
-        "text": "Sorare's Hisotircal Sale Volume",
+        "text": "Sorare's Hisotircal Daily Sales Volume",
         "subtitle": "Evolution of Sorare's Historical Sales Volume since release, in USD",
         "subtitleFontStyle": "italic",
         "subtitleFontSize": 10,
