@@ -16,7 +16,7 @@
     "height": 300,
     "width": 300,
 
-    "mark": {"type": "line", "color": "rgb(0,47,167"},
+    "mark": {"type": "line", "color": "rgb(0,67,0"},
     "encoding": {
       "x": {"field": "DateTime", "type": "temporal", "axis":{"title": "Date"}},
       "y": {"field": "Sales (USD)", "type": "quantitative"}
