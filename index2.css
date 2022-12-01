@@ -45,6 +45,12 @@ h1, h3, p{
     border-radius: 10px;
     border-color: rgb(0, 0, 0);
 }
+#w4{
+    height: 550px;
+}
+#w8{
+    height: 600px;
+}
 
 a{
     background-color: rgb(146, 9, 9, .3);
@@ -99,7 +105,11 @@ a:hover{
 }
 #Chart7{
     width:900px;
-}    
+}
+#Chart2{
+    width: 450px;
+}
+
 .miniChart{
     background-color: white;
     width:300px;

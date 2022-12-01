@@ -37,13 +37,19 @@
     <div class="myWeek" id="w1">
         <h3>Week One</h3>
         <p>Our first task was to embed charts</p>
-        
-        <p>The first chart illustrates meat consumption in OECD countries.</p>
-        <div class="chart" id="Chart1"></div>
-
-        
-        <p>My second chart looks at ethereum trading statistics from 2016-2021</p>
-        <div class="chart" id="Chart2"> </div>
+        <div>
+        <ul style="list-style: none;">
+            <li><div>
+            <p>The first chart illustrates meat consumption in OECD countries.</p>
+            <div class="chart" id="Chart1"></div>
+            </div>
+            <div>        
+            <p>My second chart looks at ethereum trading statistics from 2016-2021</p>
+            <div class="chart" id="Chart2"></div>
+            </div>
+            </li>
+        </ul>
+        </div>
     </div> 
 
     <div class="myWeek" id="w2">
@@ -86,20 +92,26 @@
         <h3>Week Five</h3>
         <p>Our fifth task was to loop on the ONS API to quickly produce 9 time series from a dataset</p>
         <div>
+        <ul style="list-style: none;">
         <li><div class="miniChart" id="mc4"></div><div class="miniChart" id="mc2"></div><div class="miniChart" id="mc3"></div></li>
+        </ul>
         </div>
         <div>
+        <ul style="list-style: none;">    
         <li><div class="miniChart" id="mc5"></div><div class="miniChart" id="mc6"></div><div class="miniChart" id="mc7"></div></li>
+        </ul>
         </div>
         <div>
+        <ul style="list-style: none;">
         <li><div class="miniChart" id="mc1"></div><div class="miniChart" id="mc8"></div><div class="miniChart" id="mc9"></div></li>
+        </ul>
         </div>
         <a href="https://colab.research.google.com/drive/1LbN45IX8flwpGEFPSJTG3mQjVRZOihbp?usp=sharing" class="button"> Link to Colab</a>
     </div>
 
     <div class="myWeek" id="w7">
         <h3>Week Seven</h3>
-        <p>Our seventh task was to produce a base map and a choropleth map</p>
+        <p>Our sixth task was to produce a base map and a choropleth map</p>
 
         <p>First, my base map of South America:</p>
 
@@ -108,6 +120,17 @@
         <p>Now Inequality data is embedded into the choropleth map. It shows the Gini Coefficient of each country, with Uruguay the most equal country in terms of income.</p>
 
         <div class="chart" id="Chart9"></div>
+    </div>
+
+    <div class="myWeek" id="w8">
+        <h3>Week Eight</h3>
+        <p>Our seventh task was to produce two charts supporting a refuting an argument made at the Festival of Economics</p>
+        <p>‘Lockdown increased the appeal of crypto - there was a lack of sports betting, people were looking for a rush - this lead to the gamification of crypto’</p>
+        <ul style="list-style: none;">
+        <li><div class="chart" id="Chart10"></div> <div class="chart" id="Chart11"></div></li>
+        </ul>
+        <p>While we cannot establish causality from this data, limited sports betting lead to people seeking similar thrills elsewhere. It is plausible that more people looking for a rush entered the crypto scene.
+        </p>
     </div>
 </body>
 
@@ -123,6 +146,8 @@
     var myChart7 = "chart7_WCOdds.json"
     var myChart8 = "chart8_basemap.json"
     var myChart9 = "chart9_SAGiniMap.json"
+    var myChart10 = "chart10_btcwallets.json"
+    var myChart11 = "chart11_behaviour.json"
     var myMinic1 = "dash1_corp.json"
     var myMinic2 = "dash2_EU.json"
     var myMinic3 = "dash3_G&S.json"
@@ -144,6 +169,8 @@
     vegaEmbed('#Chart7', myChart7);
     vegaEmbed('#Chart8', myChart8);
     vegaEmbed('#Chart9', myChart9);
+    vegaEmbed('#Chart10', myChart10);
+    vegaEmbed('#Chart11', myChart11);
     vegaEmbed('#mc1', myMinic1);
     vegaEmbed('#mc2', myMinic2);
     vegaEmbed('#mc3', myMinic3);

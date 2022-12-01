@@ -1,0 +1,52 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+      "text": "Gambling Behaviour during Lockdown",
+      "subtitle": "Source: Wardle, H. et al. (2021)",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start",
+      "color": "black"
+    },
+    "data": {
+      "values": [
+        {
+          "category": "New Form of Gambling",
+          "Gender": "Female",
+          "Percentage": 16.5
+        },
+        {
+          "category": "New Form of Gambling",
+          "Gender": "Male",
+          "Percentage": 17.3
+        },
+        {
+          "category": "Higher Frequency Gambling",
+          "Gender": "Female",
+          "Percentage": 30.3
+        },
+        {
+          "category": "Higher Frequency Gambling",
+          "Gender": "Male",
+          "Percentage": 31.3
+        }
+      ]
+    },
+    "height": 210,
+    "width": 280,
+    "mark": {"type": "bar"},
+    "encoding": {
+      "x": {"field": "category", "axis": {"labelAngle": -70}, "title": null},
+      "y": {
+        "field": "Percentage",
+        "type": "quantitative",
+        "title": "Percentage (%)"
+      },
+      "xOffset": {"field": "Gender"},
+      "color": {"field": "Gender", "scale": {"range": ["#004300", "#b87304"]}},
+      "tooltip": [
+        {"field": "Percentage", "type": "quantitative", "title": "Percentage"}
+      ]
+    }
+  }
+  
