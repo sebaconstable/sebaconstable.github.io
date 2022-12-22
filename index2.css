@@ -1,22 +1,12 @@
-/* Richard Davies, Data Science for Economists */
-
-/* This is my second CSS file */
-
-
-/* Import a font */
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
 
-/* Set the background color for my page: */
-
-/* Book on colour = Joseph Albers - Interaction of Colour */
-
 body{
-    background-color: rgb(146, 9, 9);
+    background-color: rgb(129, 216, 248);
  }
 
 
-/* Choose the appearance of the tags, h1, h3 and p: */
 h1, h3, p{
     color:rgb(0, 0, 0);
     font-family: 'Roboto', sans-serif;
@@ -53,7 +43,7 @@ h1, h3, p{
 }
 
 a{
-    background-color: rgb(146, 9, 9, .3);
+    background-color: rgb(129, 216, 248, .3);
     padding: 10px;
     
     border: 3px;
@@ -75,7 +65,7 @@ a:hover{
 }
 
 .button {
-    background-color: rgb(146, 9, 9, .3);
+    background-color: rgb(129, 216, 248, .3);
     border: 3px;
     border-color: black;
     border-style: solid;
@@ -90,14 +80,13 @@ a:hover{
     cursor: pointer;
   }
 
-/* Set the apperance of the class, chart */
 .chart{
     background-color: white;
     width:450px;
     border-width: 3px;
     border-style: solid;
     border-radius: 5px;
-    border-color: rgb(146, 9, 9);
+    border-color: rgb(0,0,0);
 
     align-items: center;
     justify-content: center;
@@ -116,5 +105,5 @@ a:hover{
     border-width: 3px;
     border-style: solid;
     border-radius: 5px;
-    border-color: rgb(146, 9, 9);
+    border-color: rgb(0,0,0);
 }
