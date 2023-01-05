@@ -1,0 +1,46 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "",
+    "title": {
+      "text": "Inequality in South America",
+      "subtitle": ["Enrolment Rates 2000. Source: World Bank API", "Note: Brazil data from 2002"],
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "middle",
+      "color": "black"
+    },
+    "config": {"background": "white", "view": {"stroke": "transparent"}},
+    "width": 400,
+    "height": 300,
+    "data": {
+      "url": "https://raw.githubusercontent.com/sebaconstable/sebaconstable.github.io/main/South%2BNorth.json",
+      "format": {"property": "features"}
+    },
+    "transform": [
+      {
+        "lookup": "properties.subunit",
+        "from": {
+          "key": "country",
+          "fields": ["Secondary Enrolment", "Tertiary Enrolment"],
+          "data": {
+            "url": "https://raw.githubusercontent.com/sebaconstable/sebaconstable.github.io/main/chart4data.csv"
+          }
+        }
+      }
+    ],
+    "projection": {"type": "mercator"},
+    "mark": {"type": "geoshape", "stroke": "white", "strokeWidth": 0.5},
+    "encoding": {
+      "color": {
+        "field": "Secondary Enrolment",
+        "legend": {"title": null, "orient": "right", "direction": "vertical"},
+        "type": "quantitative",
+        "scale": {"scheme": "blues", "reverse": false}
+      },
+      "tooltip": [
+        {"field": "properties.subunit", "title": "Country"},
+        {"field": "Secondary Enrolment", "title": "Secondary Enrolment", "format": ".2f"},
+        {"field": "Tertiary Enrolment", "title": "Tertiary Enrolment", "format": ".2f"}
+      ]
+    }
+  }

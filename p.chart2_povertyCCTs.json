@@ -1,0 +1,77 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "People in CCT programmes and headcount poverty",
+    "subtitle": ["Sources: Our World in Data, CEPAL. Various poverty lines (2017 USD PPP)", "Data from: ARG, BOL, BRA, COL, CHL, CRI, DOM, ECU, SLV, HND, MEX, PAN, PRY, PER, URY"],
+
+    "description": "A chart showing headcount poverty and CCT receiver trends. The interactive tooltip was made by applying a pivot on the data and adding a hover by year feature.",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "transform": [
+    {
+      "calculate": "{'Total215': 'Absolute Poverty', 'Total365': 'LMIC Poverty Line', 'Total685': 'UMIC Poverty Line', 'TotalCCT': 'CCT Beneficiaries'}[datum.Series]",
+      "as": "Series"
+    }
+  ],
+  "data": {
+    "url": "https://raw.githubusercontent.com/sebaconstable/sebaconstable.github.io/main/chart2data.csv"
+  },
+  "mark": "line",
+  "height": 300,
+  "width": 450,
+  "config": {"numberFormat": ".2f"},
+  "encoding": {
+    "x": {"field": "Year", "type": "temporal", "axis": {"grid": false}}
+  },
+  "layer": [
+    {
+      "encoding": {
+        "color": {
+          "field": "Series",
+          "type": "nominal",
+          "scale": {"range": ["#b30b29", "#bd4606", "#002FA7", "black"]}
+        },
+        "y": {
+          "field": "People (Millions)",
+          "type": "quantitative",
+          "axis": {"title": "Millions of People", "grid": false}
+        }
+      },
+      "layer": [
+        {"mark": "line"},
+        {"transform": [{"filter": {"selection": "hover"}}], "mark": "point"}
+      ]
+    },
+    {
+      "transform": [
+        {"pivot": "Series", "value": "People (Millions)", "groupby": ["Year"]}
+      ],
+      "mark": "rule",
+      "encoding": {
+        "opacity": {
+          "condition": {"value": 0.3, "selection": "hover"},
+          "value": 0
+        },
+        "tooltip": [
+          {"field": "Absolute Poverty", "type": "quantitative"},
+          {"field": "LMIC Poverty Line", "type": "quantitative"},
+          {"field": "UMIC Poverty Line", "type": "quantitative"},
+          {"field": "CCT Beneficiaries", "type": "quantitative"}
+        ]
+      },
+      "selection": {
+        "hover": {
+          "type": "single",
+          "fields": ["Year"],
+          "nearest": true,
+          "on": "mouseover",
+          "empty": "none",
+          "clear": "mouseout"
+        }
+      }
+    }
+  ]
+}

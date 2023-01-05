@@ -32,7 +32,7 @@
     <div class="content">
         <hr>
     <h1>Are Conditional Cash Transfers a magic bullet for development?</h1>
-    <h2>A Latin & Central America case study</h2>
+    <h2>A Latin America case study</h2>
         <hr>
     <div class="section" id="intro">
         <h2>Introduction</h2>
@@ -59,16 +59,38 @@
         <hr>
     <div class="section" id="ineq">
         <h2>Inequality</h2>
-
+        <p> After trying to automise the data aggregation by country, I realised that due to missing values the best way would be to manually compute them on excel. For some missing values I computed the average spent/person in the nearest year and used that to impute, and for a few others I used 'Total amount of people in recipient households'. I thought the median would best reflect overall CCT size as some countries had low outliers due to starting up slowly. Gini values are taken from the World Bank API</p>
+        <div> <a id="colab" href="https://colab.research.google.com/drive/1K8eLnRbQOtmNMhOxdgUaxYnEAFAEKIO7?usp=sharing">Colab Chart 3</a> </div>
+        <div class="chart" id="pChart3"></div>
+        <p>Whilst all countries that implemented CCT Programmes (excluding Costa RIca, who had a very small % of Population in them) saw a significant reduction in their Gini’s over the given time period, there is no direct correlation between a higher amount of the population being beneficiaries and a bigger reduction in the Gini.</p>
+    </div>
+        <hr>
+    <div class="section" id="educ">
+        <h2>Education</h2>
+        <p>Due to the nature of CCTs and the recency of their popularity, we are yet to discover many of the long-term impacts. To get a glimpse at these, we will now look at how CCTs have affected education, as education is fundamentally the main contributor to building equality of opportunity.</p>
+        <p>First, a map showing initial schooling levels in the region, using the World Bank API to call on enrollment data:</p>
+        <div class="chart" id="pChart4"></div>
+        <p>Secondly, a bivariate map showing terciles of population in CCTs and change in secondary enrolment rates:</p>
+        <div class="kepler" id="kep"><iframe src="https://kepler.gl/demo/map?mapUrl=https://dl.dropboxusercontent.com/s/6d0xrzmpoftlzzj/keplergl_mzk1asi.json" style="border:2px #1844A5 solid;" name="Kepler" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="300px" width="420px" allowfullscreen></iframe></div><div class="palette" id="pChart5"></div>
+        <div><a id="colab" href="https://colab.research.google.com/drive/1lyeIpSdcUsPvzr8kX8tETLTpuuIUcyHd?usp=sharing">Maps Colab</a></div>
+        <p>The bivariate map was made by classifying countries in colab, plotting on Kepler and embedding with an iframe.</p>
+        <p>From the maps we see that Argentina and Brazil have low increases in enrolment, but from a much higher base in the 2000s. Overall, we cannot see a strong correlation between our proxy of CCT size and increases in enrolment, however, much like with inequality, a lot of progress has been made since 2000.
+        </p>
     </div>
 </body>
 
 <script>
     var pChart1 = "p.chart1_CCTsBudget.json"
     var pChart2 = "p.chart2_povertyCCTs.json"
+    var pChart3 = "p.chart3_inequality.json"
+    var pChart4 = "p.chart4_simple.json"
+    var pChart5 = "p.chart5_palette.json"
 
     vegaEmbed('#pChart1', pChart1);
     vegaEmbed('#pChart2', pChart2);
+    vegaEmbed('#pChart3', pChart3);
+    vegaEmbed('#pChart4', pChart4);
+    vegaEmbed('#pChart5', pChart5);
 </script>
 
 

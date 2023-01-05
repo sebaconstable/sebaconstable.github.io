@@ -1,0 +1,49 @@
+{ "$schema": "https://vega.github.io/schema/vega-lite/v5.json", 
+    "title": {
+      "text": "Country comparison of CCT beneficiaries and Inequality",
+      "subtitle":["Change in Gini and median % Population in CCT Programmes (2000-2019)", "Sources: World Bank and CEPAL", "X Axis: Median % of Population in CCT Programmes. Size of bubble: Population (2019)"],
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+    },
+  "data": {
+    "url": "https://raw.githubusercontent.com/sebaconstable/sebaconstable.github.io/main/chart3data.csv", 
+    "format":{"type": "csv"}},    
+    "height": 300,
+    "width": 450,
+        "mark": {
+        "type":"circle",
+        "color":"#b30b29",
+        "opacity":0.7
+        },
+        "encoding": {
+          "x": {
+            "field": "Median %Pop", 
+            "type": "quantitative",
+            "scale": {"domain": [0, 40]},
+            "axis":{"grid": false, "translate":-150, "position":150},
+            "title":""},
+  
+          "y": {
+            "field": "Change Gini", 
+            "type": "quantitative",
+            "scale": {"domain": [-35, 35]},
+            "axis":{"grid": false, "position":0},
+            "title":"% Change in Gini"},
+  
+          "size": {
+            "field": "Population (Millions)", 
+            "type": "quantitative",
+            "title":"",
+            "scale": { "range": [4, 220]},
+            "legend":null},
+
+          "tooltip":[
+            {"field":"country", "type": "ordinal", "title":"Country"},
+            {"field":"Initial Gini", "type": "quantitative", "title":"Initial Gini", "format":".0f"},
+            {"field":"Final Gini", "type": "quantitative", "title":"Final Gini", "format":".0f"},
+            {"field":"Population (Millions)", "type": "quantitative", "title":"Population (M)", "format":".2f"}
+      ]
+     }
+}
