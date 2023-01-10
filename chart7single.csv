@@ -1,0 +1,29 @@
+Unnamed: 0,Country,Year,Median % Pop,QuintGap,Quintile,average years in school
+76,Argentina,2019-01-01,8.94,5.0,Poorest Quintile,9.3
+77,Argentina,2019-01-01,8.94,5.0,Richest Quintile,14.3
+156,Bolivia,2019-01-01,19.87,6.4,Poorest Quintile,6.6
+157,Bolivia,2019-01-01,19.87,6.4,Richest Quintile,13.0
+236,Brazil,2019-01-01,26.35,6.500000000000001,Poorest Quintile,6.3
+237,Brazil,2019-01-01,26.35,6.500000000000001,Richest Quintile,12.8
+316,Chile,2019-01-01,24.85,4.800000000000001,Poorest Quintile,10.5
+317,Chile,2019-01-01,24.85,4.800000000000001,Richest Quintile,15.3
+396,Colombia,2019-01-01,21.34,6.4,Poorest Quintile,6.4
+397,Colombia,2019-01-01,21.34,6.4,Richest Quintile,12.8
+476,Costa Rica,2019-01-01,3.67,6.4,Poorest Quintile,6.3
+477,Costa Rica,2019-01-01,3.67,6.4,Richest Quintile,12.7
+556,Dominican Republic,2019-01-01,35.59,4.6,Poorest Quintile,7.9
+557,Dominican Republic,2019-01-01,35.59,4.6,Richest Quintile,12.5
+636,Ecuador,2019-01-01,8.55,6.0,Poorest Quintile,7.0
+637,Ecuador,2019-01-01,8.55,6.0,Richest Quintile,13.0
+716,Honduras,2019-01-01,9.89,6.9,Poorest Quintile,4.2
+717,Honduras,2019-01-01,9.89,6.9,Richest Quintile,11.1
+796,Mexico,2019-01-01,23.43,5.9,Poorest Quintile,7.1
+797,Mexico,2019-01-01,23.43,5.9,Richest Quintile,13.0
+876,Panama,2019-01-01,11.52,7.8,Poorest Quintile,6.8
+877,Panama,2019-01-01,11.52,7.8,Richest Quintile,14.6
+956,Paraguay,2019-01-01,7.81,7.200000000000001,Poorest Quintile,6.1
+957,Paraguay,2019-01-01,7.81,7.200000000000001,Richest Quintile,13.3
+1036,Peru,2019-01-01,4.76,6.7,Poorest Quintile,6.3
+1037,Peru,2019-01-01,4.76,6.7,Richest Quintile,13.0
+1116,Uruguay,2019-01-01,21.49,6.199999999999999,Poorest Quintile,7.5
+1117,Uruguay,2019-01-01,21.49,6.199999999999999,Richest Quintile,13.7
