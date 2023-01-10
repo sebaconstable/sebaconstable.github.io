@@ -1,0 +1,29 @@
+Unnamed: 0,Country,Year,Median % Pop,QuintGap,Quintile,average years in school
+0,Argentina,2000-01-01,8.94%,6.1,Quintile 1,7.1
+1,Argentina,2000-01-01,8.94%,6.1,Quintile 5,13.2
+80,Bolivia,2000-01-01,19.87%,8.600000000000001,Quintile 1,3.3
+81,Bolivia,2000-01-01,19.87%,8.600000000000001,Quintile 5,11.9
+160,Brazil,2000-01-01,26.35%,7.5,Quintile 1,3.0
+161,Brazil,2000-01-01,26.35%,7.5,Quintile 5,10.5
+240,Chile,2000-01-01,24.85%,5.9,Quintile 1,7.7
+241,Chile,2000-01-01,24.85%,5.9,Quintile 5,13.6
+320,Colombia,2000-01-01,21.34%,5.9,Quintile 1,4.9
+321,Colombia,2000-01-01,21.34%,5.9,Quintile 5,10.8
+400,Costa Rica,2000-01-01,3.67%,5.799999999999999,Quintile 1,4.9
+401,Costa Rica,2000-01-01,3.67%,5.799999999999999,Quintile 5,10.7
+480,Dominican Republic,2000-01-01,35.59%,6.299999999999999,Quintile 1,4.4
+481,Dominican Republic,2000-01-01,35.59%,6.299999999999999,Quintile 5,10.7
+560,Ecuador,2000-01-01,8.55%,6.9,Quintile 1,4.8
+561,Ecuador,2000-01-01,8.55%,6.9,Quintile 5,11.7
+640,Honduras,2000-01-01,9.89%,6.2,Quintile 1,2.8
+641,Honduras,2000-01-01,9.89%,6.2,Quintile 5,9.0
+720,Mexico,2000-01-01,23.43%,8.5,Quintile 1,3.6
+721,Mexico,2000-01-01,23.43%,8.5,Quintile 5,12.1
+800,Panama,2000-01-01,11.52%,7.1,Quintile 1,6.1
+801,Panama,2000-01-01,11.52%,7.1,Quintile 5,13.2
+880,Paraguay,2000-01-01,7.81%,6.6,Quintile 1,3.9
+881,Paraguay,2000-01-01,7.81%,6.6,Quintile 5,10.5
+960,Peru,2000-01-01,4.76%,7.800000000000001,Quintile 1,4.0
+961,Peru,2000-01-01,4.76%,7.800000000000001,Quintile 5,11.8
+1040,Uruguay,2000-01-01,21.49%,5.0,Quintile 1,6.4
+1041,Uruguay,2000-01-01,21.49%,5.0,Quintile 5,11.4
