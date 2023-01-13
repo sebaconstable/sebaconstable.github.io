@@ -37,58 +37,58 @@
     <div class="section" id="intro">
         <h2>Introduction</h2>
         <p>Conditional Cash Transfers (CCTs) are payments made to individuals/households dependent on pre-determined investments they make, usually related to human capital formation. They provide immediate poverty alleviation, through transfers, whilst also aiming to ensure longer-term steps are taken to prevent the intergenerational transmission of poverty. In this project, I aim to analyse the evolution of CCTs in Latin America and their effect on various development indicators.</p>
-        <p>The lack of aggregated data on this topic led me to <a id="text" href="https://dds.cepal.org/bpsnc/cct"> this page</a>. It contains Excel download links to data from individual CCT programmes in the region. I decided to try and automate the process of selecting relevant variables from each file. This ended up being a huge endeavour and a steep learning curve. I first created a beautiful soup to identify the files and download them locally. All files contained different variables and years, making it much harder to loop on. However, after extensively learning about several python packages and functions, I eventually managed to scrape the variables I wanted and save them in a json file. This process is immediately replicable by creating a data folder and running the code. Finally, I wanted to aggregate the variables, namely the budget and people affected, by year.</p>
+        <p>The lack of aggregated data on this topic led me to <a id="text" href="https://dds.cepal.org/bpsnc/cct"> this page</a>. It contains Excel download links to data from individual CCT programmes in the region. I tried to automate the process of selecting relevant variables from each file. This ended up being a huge endeavour and a steep learning curve. I first created a beautiful soup to identify the files and download them locally. All files contained different variables and years, making it much harder to loop on. However, after extensively learning about several python packages and functions, I eventually managed to scrape the required variables and save them in a json file. This process is immediately replicable by creating a data folder and running the code. Lastly, I aggregated the budget and people affected by year.</p>
         <div>
             <a id="colab" href="https://colab.research.google.com/drive/1b_TSH15UrQyGr3v95YPM1niPloS_rhc0#scrollTo=J1l7OaoS-E_S">Colab - Website to json</a>
             <a id="colab" href="https://colab.research.google.com/drive/1iboykvq4W9bdkIs3NCPNA4M1VFN4C2O7#scrollTo=oKR_KXjeGFoQ">Colab - Aggregating and Chart 1</a>
         </div>
         <div class="chart" id="pChart1"></div>
-        <p>After finally obtaining this data, I chose to make a simple chart to show the history of CCTs in the region. After exponential growth from the mid 2000s to 2014, the last few years has seen a decrease in both metrics.</p>
+        <p>After finally obtaining this data, I made a simple chart to show the history of CCTs in the region. Despite exponential growth from the mid 2000s to 2014, the last few years has seen a decrease in both metrics.</p>
     </div>
         <hr>
     <div class="section" id="pov">
         <h2>Poverty</h2>
-        <p>I then plotted this trend against the number of people under various international poverty lines (as many national poverty lines in the region are above the absolute poverty line, so that metric alone would underestimate poverty). The most reliable source I could find for absolute headcount poverty was ourworldindata. After downloading their huge poverty dataset, I filtered the data in Stata and then merged it with my CCT data in Colab. One obstacle encountered was missing values: during certain periods, Chile and Brazil only reported data every other year. Less than 10% of the data was missing and I decided that manually computing the averages of the missing values' neighbouring years in excel was the best approach.</p>
+        <p>I then plotted this trend against the number of people under various international poverty lines (many national poverty lines in the region are above the absolute poverty line, so that metric alone would underestimate poverty). The most reliable source I could find for absolute headcount poverty was ourworldindata. After downloading their huge poverty dataset, I filtered the data in Stata and then merged it with my CCT data in Colab. One obstacle I encountered was missing values: Chile and Brazil only reported data every other year during certain periods. Less than 10% of the data was missing so I decided that manually computing the averages of the missing values' neighbouring years in excel was the best approach.</p>
         <div>
             <a id="colab" href="https://github.com/sebaconstable/sebaconstable.github.io/blob/main/PovFilterStata">Stata Code</a>
             <a id="colab" href="https://colab.research.google.com/drive/1lL_3X7B7qNa6oIB_Z35GkFEuB6MDnIWX#scrollTo=Qp-6l0LyrU9z">Colab Chart 2</a>
         </div>
         <div class="chart" id="pChart2"></div>
-        <p>The first two charts' interactive tooltips were made by pivotting the data and adding a hover function. Although causality cannot be inferred from this chart, it shows a strong trend of poverty reduction over time whilst CCT popularity grows. Interestingly, poverty reduction flattens out once CCTs start shrinking.</p>
+        <p>The first two charts' interactive tooltips were made by pivoting the data and adding a hover function. Although causality cannot be inferred from this chart, it shows a strong trend of poverty reduction over time whilst CCT popularity grows. Interestingly, poverty reduction flattens out once CCTs start shrinking.</p>
     </div>
         <hr>
     <div class="section" id="ineq">
         <h2>Inequality</h2>
-        <p> After noticing an abundance of missing values when trying to automise the data aggregation by country, I thought the best way would be to manually compute the % of population in CCTs per country on excel. For some missing values I computed the average spent/person in the nearest year and used that to impute, and for others I used similar available variables. I thought the median would best reflect overall CCT size as some countries had low outliers due to starting up slowly. Gini values are taken from the World Bank API, with the change computed in colab.</p>
+        <p> After noticing an abundance of missing values when trying to automise the data aggregation by country, I thought the best approach would be to manually compute the % of population in CCTs per country on excel. I computed the average spent/person in the nearest year and used that to impute some missing values. For the others I used similar available variables. For overall CCT size, I thought the median would be the best proxy as some countries had low outliers due to slow adoption. I took Gini values from the World Bank API, calculating the change in colab.</p>
         <div> <a id="colab" href="https://colab.research.google.com/drive/1K8eLnRbQOtmNMhOxdgUaxYnEAFAEKIO7?usp=sharing">Colab Chart 3</a> </div>
         <div class="chart" id="pChart3"></div>
-        <p>Whilst all countries that implemented CCT Programmes saw a significant reduction in their Gini’s over the given time period (excluding Costa Rica - lowest % of Population in them), there is no relationship between the amount of beneficiaries and the change in Gini.</p>
+        <p>Whilst all countries that implemented CCT Programmes saw a significant reduction in their Gini’s (excluding Costa Rica - lowest % of population in CCTs), there is no relationship between the amount of beneficiaries and the magnitude of change in Gini.</p>
     </div>
         <hr>
     <div class="section" id="educ">
         <h2>Education</h2>
-        <p>Due to the nature of CCTs and the recency of their popularity, we are yet to discover many of the long-term impacts. To get a glimpse at what these may be, we can explore the effects on education, the main contributor to building equality of opportunity.</p>
-        <p>First, a map showing initial (2000) schooling levels in the region, using the World Bank API to call on enrollment data:</p>
+        <p>Due to the nature of CCTs and the recency of their popularity, we are yet to discover many of the long-term impacts. To get a glimpse at what these may be, we can explore the effects on education, the main contributor to building equality of opportunity:</p>
+        <p>First, a map showing initial schooling levels in the region (2000), using the World Bank API to call on enrollment data:</p>
         <div class="chart" id="pChart4"></div>
-        <p>Secondly, a bivariate map using terciles of population in CCTs and % change in secondary enrolment rates:</p>
+        <p>Second, a bivariate map using terciles of population in CCTs and % change in secondary enrolment rates:</p>
         <div class="kepler" id="kep"><iframe src="https://kepler.gl/demo?mapUrl=https://raw.githubusercontent.com/sebaconstable/sebaconstable.github.io/main/kepler.gl-2.json" style="border:2px #1844A5 solid;" name="Kepler" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="300px" width="450px" allowfullscreen></iframe></div><div class="palette" id="pChart5"></div>
         <div><a id="colab" href="https://colab.research.google.com/drive/1lyeIpSdcUsPvzr8kX8tETLTpuuIUcyHd?usp=sharing">Maps Colab</a></div>
-        <p>The bivariate map was made by classifying countries in colab, plotting on Kepler and embedding with an iframe.</p>
-        <p>From the maps we see that Argentina and Brazil have the lowest increases in enrolment, but from the highest bases. Overall, we cannot see correlation between our proxy of CCT size and increases in enrolment, however, as with inequality, a lot of progress has been made since 2000.
+        <p>I made the bivariate map by classifying countries in colab, plotting on Kepler and embedding with an iframe.</p>
+        <p>From the maps we see that Argentina and Brazil have the lowest increases in enrolment, but from the highest bases. Overall, there is no correlation between my proxy of CCT size and increases in enrolment. However, as with inequality, a lot of progress has been made since 2000.
         </p>
     </div>
         <hr>
     <div class="section" id="educ2">
-        <p>Finally, a look at inequality through average years of schooling.</p>
+        <p>Third, inequality through average years of schooling.</p>
         <div><a id="colab" href="https://colab.research.google.com/drive/1_tlahz7suFJZDHNahwHTZOCz19gtqKvC?usp=sharing">Link to Colab</a></div>
         <div class="chart" id="pChart6"></div>
-        <p>We can see that 5/7 of the countries with 20+% Population in CCTs saw a significant reduction in the difference in average schools years for their poorest and richest quintiles. All countries' poorest quintiles saw an increase in their mean years of schooling.</p>
-        <p>The CEDLAS download link required some cleaning in Excel. During this I also added each countries median % of population.</p>
+        <p>5/7 of the countries with 20+% population in CCTs saw a significant reduction in the difference in average schools years between their poorest and richest quintiles. All countries' poorest quintiles saw an increase in their mean years of schooling.</p>
+        <p>The CEDLAS download link required some cleaning in Excel. During this, I also added each countries' median % of population.</p>
     </div>
         <hr>
     <div class="section" id="conclusion">
         <h2>Conclusion</h2>
-        <p>Further research needs to be done with individual programme microdata to better derive causality from the relationships discovered, and optimise CCT variables such as transfer amounts and the conditions for the transfers. In addition, affected students need to be tracked into the future so as to learn more about the longer-term impacts. However, CCTs are a powerful tool, and their use is highly correlated with improvements in poverty, inequality and education in Latin America.</p>
+        <p>Further research needs to be done with individual programme microdata to better derive causality from the relationships discovered and optimise CCT variables, such as transfer amounts and conditions. In addition, affected students need to be tracked into the future to learn more about longer-term impacts. However, CCTs are a powerful tool, and their use strongly correlats with improvements in poverty, inequality and education in Latin America.</p>
     </div>   
 </body>
 

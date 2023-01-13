@@ -1,7 +1,7 @@
 { "$schema": "https://vega.github.io/schema/vega-lite/v5.json", 
     "title": {
-      "text": "Country comparison of CCT beneficiaries and Inequality",
-      "subtitle":["Change in Gini and median % Population in CCT Programmes (2000-2019)", "Sources: World Bank and CEPAL", "Median % of Population in CCT Programmes (x). Size of bubble: Population (2019)"],
+      "text": "Country comparison of CCT beneficiaries and Inequality, 2000-2019",
+      "subtitle":["Change in Gini (y), Median % of Population in CCT Programmes (x), Size of bubble: Population (2019)", "Sources: World Bank and CEPAL"],
       "subtitleFontStyle":"italic",
       "subtitleFontSize":10,
       "anchor": "start",

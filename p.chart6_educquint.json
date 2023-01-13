@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.2.0.json",
   "title": {
-    "text": "Differences in mean years of schooling by welath quintile, 2000-2019",
+    "text": "Differences in mean years of schooling by wealth quintile, 2000-2019",
     "subtitle": ["Source: CEDLAS. Size of bubble: Median % of Population in CCT Programmes." ],
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 10,
