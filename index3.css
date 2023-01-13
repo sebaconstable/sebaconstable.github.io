@@ -78,7 +78,9 @@ a:hover{
     border-color: rgb(24, 68, 165);
     margin-top: 20px;
 }
-
+#pChart6{
+    width: 750px;
+}
 iframe {
     width: 700px;
     height: 500px;
