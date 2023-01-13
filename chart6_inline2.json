@@ -8421,6 +8421,6 @@
     "encoding": {
       "x": {"field": "district", "type": "nominal", "axis": {"labelAngle": 90, "labelOverlap":true}, "title": "School"},
       "y": {"field": "Teachers per Student", "type": "quantitative", "title": "Students per Teacher"},
-      "color": {"field": "district", "type": "nominal", "title": "School"}
+      "color": {"field": "district", "type": "nominal", "legend": null}
     }
   }
