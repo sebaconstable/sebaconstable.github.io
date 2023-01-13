@@ -1,52 +1,67 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": {
-      "text": "Gambling Behaviour during Lockdown",
-      "subtitle": "Source: Wardle, H. et al. (2021)",
-      "subtitleFontStyle": "italic",
-      "subtitleFontSize": 10,
-      "anchor": "start",
-      "color": "black"
-    },
-    "data": {
-      "values": [
-        {
-          "category": "New Form of Gambling",
-          "Gender": "Female",
-          "Percentage": 16.5
-        },
-        {
-          "category": "New Form of Gambling",
-          "Gender": "Male",
-          "Percentage": 17.3
-        },
-        {
-          "category": "Higher Frequency Gambling",
-          "Gender": "Female",
-          "Percentage": 30.3
-        },
-        {
-          "category": "Higher Frequency Gambling",
-          "Gender": "Male",
-          "Percentage": 31.3
-        }
-      ]
-    },
-    "height": 210,
-    "width": 200,
-    "mark": {"type": "bar"},
-    "encoding": {
-      "x": {"field": "category", "axis": {"labelAngle": -70}, "title": null},
-      "y": {
-        "field": "Percentage",
-        "type": "quantitative",
-        "title": "Percentage (%)"
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Gambling Behaviour in Britan during Lockdown",
+    "subtitle": "Source: Wardle, H. et al. (2021)",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "width": 200,
+  "height":205,
+  "data": {
+    "values": [
+      {
+        "category": "New Form of Gambling",
+        "ValueM": 16.5,
+        "ValueF": 17.3,
+        "legend": "Male"
       },
-      "xOffset": {"field": "Gender"},
-      "color": {"field": "Gender", "scale": {"range": ["#004300", "#b87304"]}},
-      "tooltip": [
-        {"field": "Percentage", "type": "quantitative", "title": "Percentage"}
-      ]
+      {
+        "category": "Higher Frequency Gambling",
+        "ValueM": 30.3,
+        "ValueF": 31.3,
+        "legend": "Female"
+      }
+    ]
+  },
+  "encoding": {
+    "x": {"field": "category", "type": "nominal", "axis": {"labelAngle": -70}, "title":null}
+  },
+  "layer": [
+    {
+      "mark": {"type": "bar", "xOffset": -15, "size": 30, "color": "#004300"},
+      "encoding": {
+        "y": {
+          "field": "ValueM",
+          "type": "quantitative",
+          "axis": {"title": "Percentage of People (%)", "grid": false}
+        }
+      }
+    },
+    {
+      "mark": {"type": "bar", "size": 30, "xOffset": 18, "color": "#b87304"},
+      "encoding": {
+        "y": {
+          "field": "ValueF",
+          "type": "quantitative",
+          "axis": {"title": "Percentage of People (%)", "ticks": false}
+        }
+      }
+    },
+    {
+      "mark": {"type": "text"},
+      "encoding": {
+        "fill": {
+          "field": "legend",
+          "scale": {"range": ["#004300", "#b87304"]},
+          "legend": {"title": null, "symbolType": "square", "orient": "top-right"}
+        },
+          "tooltip": [
+      {"field": "ValueM", "type": "quantitative", "title": "Percentage"}
+    ]
+      }
     }
-  }
-  
+  ]
+}

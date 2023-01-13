@@ -65,10 +65,10 @@
         <h3>Week Three</h3>
         <p>Our third task was to create two charts with embedded data</p>
 
-        <p>First, a simple bar chart showing Sorare's historical sales data</p>
+        <p>First, a scatter plot showing the correlation between students enrolled and amount of teachers by district.</p>
         <div class="chart" id="Chart5"></div>
 
-        <p>By making it a line chart, and starting from a later date, the chart allows for a more detailed exploration of recent trends and volatility</p>
+        <p>By applying a transform in vega, I made a bar chart which shows that the amount of students per teacher is centered at ~ 20.</p>
         <div class="chart" id="Chart6"></div>
     </div>
 
@@ -120,13 +120,43 @@
 
     <div class="myWeek" id="w8">
         <h3>Week Eight</h3>
-        <p>Our seventh task was to produce two charts supporting a refuting an argument made at the Festival of Economics</p>
-        <p>‘Lockdown increased the appeal of crypto - there was a lack of sports betting, people were looking for a rush - this lead to the gamification of crypto’</p>
+        <p>Our seventh task was to produce two charts to support or refute an argument made at the Festival of Economics.</p>
+        <p>‘Lockdown increased the appeal of crypto - there was a lack of sports betting, people were looking for a rush - this led to the gamification of crypto.’</p>
         <ul style="list-style: none;">
         <li><div class="chart" id="Chart10"></div> <div class="chart" id="Chart11"></div></li>
         </ul>
-        <p>While we cannot establish causality from this data, limited sports betting lead to people seeking similar thrills elsewhere. It is plausible that more people looking for a rush entered the crypto scene.
+        <p>While we cannot establish causality, limited sports betting led to people seeking similar thrills elsewhere. Hence, it is plausible that more people looking for a rush entered the crypto scene.
         </p>
+    </div>
+
+    <div class="myWeek" id="w9">
+        <h3>Week Nine</h3>
+        <p>Our eighth task was to produce two advanced visualisations</p>
+        <div class="chart" id="Chart13"></div>
+        <p>In this regression, there is a positive correlation between the % of English Learners and the % of students qualifying for reduced lunches.</p>
+        <p>Secondly, I made a heatmap showing the frequency of scorelines in the Premier League (2016-17)</p>
+        <div class="chart" id="Chart14"></div>
+    </div>
+
+    <div class="myWeek" id="w10">
+        <h3>Weeks Ten and Eleven</h3>
+        <p>Finally, we were introduced with machine learning and tasked with performing both a supervised and unsupervised learning technique.</p>
+        <p>My first hyopthesis: Using K-means clustering I can classify wines into distinguished groups wish similar properties in each cluster.</p>
+        <p><img src="unsupervised.png" alt="" style="width:300px;height:300px;"></p>
+        <p>To the naked eye, there seem to be loosely defined boundaries but fairly distinct clusters.</p>
+        <div> <a class="button" href="https://colab.research.google.com/drive/1m_93VXCIOZ32lmNwFJ4zJGNqaLdf7yB9?usp=sharing"> Link to colab</a></div>
+            <hr>
+        <p>My supervised learning hypothesis: Does logstic regression predict whether or not a customer purchases better than a decision tree?</p>
+        <figure class="half" style="display:centre">
+            <img src="LogisticTest.png" alt="" style="width:300px;height:300px;">
+            <img src="DTTest.png" alt="" style="width:300px;height:300px;">
+        </figure>
+        <figure class="half" style="display:centre">
+            <img src="LogisticCM.png" alt="" style="width:300px;height:300px;">
+            <img src="DTCM.png" alt="" style="width:300px;height:300px;">
+        </figure>
+        <p>We can see from the confusion matrices that the logistic regression does predict more accurately (74-6) than the decision tree (67-13). The decision tree largely overfits on the training data.</p>
+        <div> <a class="button" href="https://colab.research.google.com/drive/1f5tRgfnOOWBfU7QNssw4aJwmXNNvoHDt?usp=sharing"> Link to colab</a></div>
     </div>
 </body>
 
@@ -137,13 +167,16 @@
     var myChart2 = "chart2_eth.json"
     var myChart3 = "chart3_IMFLending.json"
     var myChart4 = "chart4_IMFLendingadj.json"
-    var myChart5 = "chart5_SorareSales.json"
-    var myChart6 = "chart6_SorareSalesimprv.json"
+    var myChart5 = "chart5_inline1.json"
+    var myChart6 = "chart6_inline2.json"
     var myChart7 = "chart7_WCOdds.json"
     var myChart8 = "chart8_basemap.json"
     var myChart9 = "chart9_SAGiniMap.json"
     var myChart10 = "chart10_btcwallets.json"
     var myChart11 = "chart11_behaviour.json"
+    var myChart12 = "p.chart3_inequality.json"
+    var myChart13 = "chart13_regression.json"
+    var myChart14 = "chart14_heatmap.json"
     var myMinic1 = "dash1_corp.json"
     var myMinic2 = "dash2_EU.json"
     var myMinic3 = "dash3_G&S.json"
@@ -167,6 +200,9 @@
     vegaEmbed('#Chart9', myChart9);
     vegaEmbed('#Chart10', myChart10);
     vegaEmbed('#Chart11', myChart11);
+    vegaEmbed('#Chart12', myChart12);
+    vegaEmbed('#Chart13', myChart13);
+    vegaEmbed('#Chart14', myChart14)
     vegaEmbed('#mc1', myMinic1);
     vegaEmbed('#mc2', myMinic2);
     vegaEmbed('#mc3', myMinic3);

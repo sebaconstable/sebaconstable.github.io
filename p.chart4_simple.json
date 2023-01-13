@@ -2,8 +2,8 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "description": "",
     "title": {
-      "text": "Inequality in South America",
-      "subtitle": ["Enrolment Rates 2000. Source: World Bank API", "Note: Brazil data from 2002"],
+      "text": "Secondary Enrolment in Latin America",
+      "subtitle": ["Source: World Bank API, data from 2000.", "Note: Brazil data from 2002"],
       "subtitleFontStyle": "italic",
       "subtitleFontSize": 10,
       "anchor": "middle",

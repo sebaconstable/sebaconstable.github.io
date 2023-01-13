@@ -1,0 +1,42 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.2.0.json",
+    "title": {
+      "text": "Frequency of scorelines, 2016-17 Premier League Season",
+      "subtitle": ["Source: Football Datahub"],
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start",
+      "color": "black"
+    },
+    "data": {
+      "url": "https://pkgstore.datahub.io/sports-data/english-premier-league/season-1617_csv/data/d6b7551d3e130b6e59240d7018524498/season-1617_csv.csv"
+    },
+    "height": 300,
+    "width": 300,
+    "mark": {"type": "rect", "tooltip": {"content": "data"}},
+    "encoding": {
+      "x": {
+        "field": "FTHG",
+        "type": "nominal",
+        "title": "Home Goals"
+      },
+      "y": {"field": "FTAG", 
+      "type": "nominal", 
+      "sort": "descending",
+      "title": "Away Goals"
+      },
+      
+      "color": {
+        "aggregate": "count",
+        "type": "quantitative",
+        "field": "__count",
+        "scale": {"scheme": "blues"},
+        "title": "Frequency"
+      },
+      "tooltip": [
+        {"field": "FTHG", "title":"Home Goals"},
+        {"field": "FTAG", "title":"Away Goals"},
+        {"field": "__count", "title": "Frequency"}
+      ]
+    }
+  }

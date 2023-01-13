@@ -3,7 +3,7 @@
    "title": {
     "text": "Evolution of CCTs in Latin & Central America",
     "subtitle": ["Source: CEPAL, 2000-2019", "Data from: ARG, BOL, BRA, COL, CHL, CRI, DOM, ECU, SLV, HND, MEX, PAN, PRY, PER, URY"],
-    "description": "A chart ", 
+    "description": "A big thanks to Fraser Rennie for pointing in my the right direction with the data scraping!", 
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 10,
     "anchor": "start",

@@ -80,7 +80,7 @@ a:hover{
 }
 
 iframe {
-    width: 800px;
+    width: 700px;
     height: 500px;
     border-radius: 10px;
     margin: -5px;
@@ -92,11 +92,12 @@ iframe {
 .kepler{
     display: inline-block;
     padding: 5px;
+    position: relative;
+    left: 95px;
 }
 
 .palette{
     position: relative;
     bottom: 330px;
-    left: 0px;
+    left: 100px;
 }
-

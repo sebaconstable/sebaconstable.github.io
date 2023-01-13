@@ -1,0 +1,69 @@
+{ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "description": "Various US measures state by state",
+
+  "title": {
+    "text": "School Students: English Learners and Reduced Price Lunch",
+    "subtitle":"By district, California. Source: caschools dataset (R). Size = Average Income",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black"
+  },
+
+  "data": {"url": "https://raw.githubusercontent.com/sebaconstable/sebaconstable.github.io/main/caschools.csv"},
+
+   
+  "height": 300,
+  "width": 300,
+
+"layer":[{
+
+  "mark": {
+    "type":"circle",
+    "color":"rgb(0,67,0)",
+    "size":30},
+ 
+
+  "encoding": {
+    "x": {
+      "field": "meal_pct", 
+      "type": "quantitative",
+      "scale": {"domain": [0, 100]},
+      "title": "Qualifying for Reduced-Priced meals (%)"
+      },
+
+    "y": {
+      "field": "el_pct", 
+      "type": "quantitative",
+      "scale": {"domain": [0, 100]},
+      "title": "English Learners (%)"
+      },
+    "size": {
+        "field": "avginc",
+        "type": "quantitative",
+        "scale": {"domain": [0, 150]},
+        "legend": null
+      },
+    "tooltip": [
+        {"field": "district", "type": "nominal", "title": "District"},
+        {"field": "meal_pct", "type": "quantitative", "title": "Discounted Meals (%)", "format": ".2f"},
+        {"field": "el_pct", "type": "quantitative", "title": "English Learners (%)", "format": ".2f"},
+        {"field": "avginc", "type": "quantitative", "title": "Avg Income ($USD 000s)", "format": ".2f"}
+    ]
+  }},
+
+    {
+      "mark": {"type": "line", "color": "rgb(29,4,55)"},
+
+      "transform": [{"regression": "el_pct", "on": "meal_pct"}],
+         
+      "encoding": {
+        "x": {"field": "meal_pct", "type": "quantitative"},
+        "y": {"field": "el_pct", "type": "quantitative"}
+      }
+    }
+    
+]
+
+}
