@@ -78,6 +78,9 @@ a:hover{
     border-color: rgb(24, 68, 165);
     margin-top: 20px;
 }
+#pChart4{
+    margin-top: 0;
+}
 #pChart6{
     width: 750px;
 }
